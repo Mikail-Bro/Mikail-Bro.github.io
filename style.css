@@ -250,47 +250,46 @@ body.light-theme .dropdown-panel .close-btn:hover {
 
 /*=====Portrait mode=====*/
 @media (orientation: portrait) {
-    body {
-        font-size: 18px;
-        padding: 4vh;
+    html, body {
+        font-size: 18px !important;
     }
 
     .main-button {
-        font-size: 18px;
-        padding: 12px;
+        font-size: 18px !important;
+        padding: 16px !important;
     }
 
     .dropdown-panel {
-        min-width: 90vw;
-        right: 5vw;
+        min-width: 90vw !important;
+        right: 5vw !important;
     }
 
     .my_children {
-        font-size: 24px;
+        font-size: 24px !important;
     }
 
     .child_name {
-        font-size: 18px;
+        font-size: 20px !important;
     }
 
     .child_categories {
-        font-size: 14px;
+        font-size: 16px !important;
     }
 
     .header h1 {
-        font-size: 24px;
+        font-size: 24px !important;
     }
 
     .main-button,
     .dropdown-panel button {
-        min-height: 48px;
+        min-height: 48px !important;
     }
 
     .child_card {
-        padding: 20px;
+        padding: 20px !important;
     }
 
     .dropdown-panel .close-btn {
-        margin-top: 10px;
+        margin-top: 10px !important;
     }
 }
