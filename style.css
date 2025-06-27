@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #1f1f1f;
+    color: white;
+    padding: 2vh;
+    font-size: clamp(12px, 2vw, 20px);
+    margin: 0;
+}
+
+/*===Light themes===*/ 
+
+body.light-theme {
+    background: #f0f0f0;
+    color: black;
+}
+
+body.light-theme .family,
+body.light-theme .guard,
+body.light-theme .main-button,
+body.light-theme .my_children,
+body.light-theme .child_name,
+body.light-theme .child_categories {
+    color: black;
+    text-shadow: none;
+}
+
+body.light-theme .guard {
+    color: rgb(82, 172, 82);
+}
+
+body.light-theme .child_card {
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.light-theme .dropdown-panel {
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .dropdown-panel button, 
+body.light-theme .main-button
+ {
+    background-color: rgba(63, 248, 63, 0.3);
+    color: black;
+    border: 1px solid rgba(122, 255, 122, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+body.light-theme .dropdown-panel button:hover, 
+body.light-theme .main-button:hover {
+    background-color: rgba(122, 255, 122, 0.5);
+    border-color: rgba(122, 255, 122, 0.8);
+    transform: scale(1.02);
+}
+
+body.light-theme .dropdown-panel .close-btn {
+    background-color: rgba(244, 67, 54, 0.2);
+    color: black; 
+    border: 1px solid rgba(244, 67, 54, 0.4);
+}
+
+body.light-theme .dropdown-panel .close-btn:hover {
+    background-color: rgba(244, 67, 54, 0.4);
+    border-color: rgba(244, 67, 54, 0.6);
+}
+/*===End Light themes===*/ 
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15vh;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: clamp(18px, 2vw, 30px);
+}
+
+.family,
+.guard {
+    text-shadow: 
+        0 0 5px rgba(0, 0, 0, 0.2),
+        0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.family {
+    color: rgba(255, 255, 255);
+}
+
+.guard {
+    color: rgba(122, 255, 122);
+}
+
+/*===Settings button===*/ 
+.content {
+    max-width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-button {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    margin: 6px 0;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: rgba(122, 255, 122, 0.11);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.main-button:hover {
+    background-color: rgb(122, 255, 122, 0.5);
+    border-color: rgb(122, 255, 122, 0.8);
+    transform: scale(1.02);
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-panel {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgb(67, 141, 67, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000;
+    min-width: 20vw;
+    backdrop-filter: blur(8px);
+    color: white;
+}
+
+.dropdown-panel h3 {
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.dropdown-panel button {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    margin: 6px 0;
+    font-size: 14px;
+    cursor: pointer;
+    background-color:rgb(122, 255, 122, 0.11);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.dropdown-panel button:hover {
+    background-color: rgb(122, 255, 122, 0.5);
+    border-color: rgb(122, 255, 122, 0.8);
+    transform: scale(1.02);
+}
+
+.dropdown-panel .close-btn {
+    background-color: rgba(244, 67, 54, 0.3);
+    color: white;
+    border: 1px solid rgba(244, 67, 54, 0.5);
+    backdrop-filter: blur(5px);
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.dropdown-panel .close-btn:hover {
+    background-color: rgba(244, 67, 54, 0.5);
+    border-color: rgba(244, 67, 54, 0.8);
+    transform: scale(1.02);
+}
+/*===End Settings button===*/
+
+/*===Log out button===*/
+.log_out {
+    background-color: rgba(248, 4, 52, 0.5);
+    color: white;
+    border: none;
+    padding: 1vh 2vh;
+    border-radius: 4vh;
+    cursor: pointer;
+    font-size: clamp(12px, 2vw, 20px);
+    transition: background-color 0.3s;
+}
+
+.log_out:hover {
+    background-color: rgba(248, 4, 52);
+}
+/*===End Log out button===*/
+
+.my_children {
+    font-size: clamp(18px, 2vw, 26px);
+    margin-bottom: 4vw;
+    color: rgba(122, 255, 122);
+    text-align: center; 
+    text-shadow: 
+        0 0 5px rgba(0, 0, 0, 0.2),
+        0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.child {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.child_cards_container {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 0;
+}
+
+.child_card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2vh 2vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.child_name {
+    font-weight: bold;
+    margin-bottom: 1vh;
+    color: rgba(255, 255, 255);
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+.child_categories {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: clamp(12px, 1.5vw, 16px);
+}
