@@ -246,3 +246,51 @@ body.light-theme .dropdown-panel .close-btn:hover {
     color: rgba(255, 255, 255, 0.7);
     font-size: clamp(12px, 1.5vw, 16px);
 }
+
+
+/*=====Portrait mode=====*/
+@media (orientation: portrait) {
+    body {
+        font-size: 18px;
+        padding: 4vh;
+    }
+
+    .main-button {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .dropdown-panel {
+        min-width: 90vw;
+        right: 5vw;
+    }
+
+    .my_children {
+        font-size: 24px;
+    }
+
+    .child_name {
+        font-size: 18px;
+    }
+
+    .child_categories {
+        font-size: 14px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .main-button,
+    .dropdown-panel button {
+        min-height: 48px;
+    }
+
+    .child_card {
+        padding: 20px;
+    }
+
+    .dropdown-panel .close-btn {
+        margin-top: 10px;
+    }
+}
