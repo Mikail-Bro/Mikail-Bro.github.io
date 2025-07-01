@@ -40,8 +40,7 @@ body.light-theme .dropdown-panel {
 }
 
 body.light-theme .dropdown-panel button, 
-body.light-theme .main-button
- {
+body.light-theme .main-button {
     background-color: rgba(63, 248, 63, 0.3);
     color: black;
     border: 1px solid rgba(122, 255, 122, 0.5);
@@ -154,8 +153,9 @@ body.light-theme .dropdown-panel .close-btn:hover {
 .dropdown-panel {
     display: none;
     position: absolute;
-    top: 100%;
-    right: 0;
+    top: 100%; /* Под кнопкой */
+    left: 50%; /* Центрирование */
+    transform: translateX(-50%);
     background-color: rgb(67, 141, 67, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 5px;
@@ -297,10 +297,9 @@ body.light-theme .my_children .highlight {
 
     .dropdown-panel {
         min-width: 90vw !important;
-        right: 0 !important; /* Привязываем к правому краю кнопки */
-        left: auto !important; /* Отключаем left, если он был */
-        border-radius: 8px !important;
-        margin-top: 4px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        right: auto !important;
     }
 
     .my_children {
