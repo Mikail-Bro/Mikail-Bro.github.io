@@ -127,6 +127,7 @@ body.light-theme .dropdown-panel .close-btn:hover {
 .dropdown-container {
     position: relative;
     display: inline-block;
+    width: fit-content 
 }
 
 .dropdown-panel {
