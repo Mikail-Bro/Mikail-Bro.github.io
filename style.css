@@ -40,8 +40,7 @@ body.light-theme .dropdown-panel {
 }
 
 body.light-theme .dropdown-panel button, 
-body.light-theme .main-button
- {
+body.light-theme .main-button {
     background-color: rgba(63, 248, 63, 0.3);
     color: black;
     border: 1px solid rgba(122, 255, 122, 0.5);
@@ -215,7 +214,7 @@ body.light-theme .dropdown-panel .close-btn:hover {
     backdrop-filter: blur(10px);
 }
 
-/* Цвет текста "Children" — белый в тёмной теме */
+/* Цвет текста "Children" */
 .my_children .highlight {
     color: white;
     text-shadow: 
