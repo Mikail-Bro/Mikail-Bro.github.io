@@ -28,7 +28,7 @@
             <script src="script.js"></script>
             <!-- End Settings button -->
 
-        </div> <!--header content: "Family Guard" logo and "log out" button-->
+        </div> <!--header content: "Family Guard" logo and settings button-->
 
         
         <h2 class="my_children">
@@ -37,26 +37,14 @@
 
         
         <div class="child_cards_container">
+            {% for child in children %}
             <div class="child_card">
                 <div class="child">
-                    <div class="child_name">Vasya</div>
-                    <div class="child_categories">drugs, math</div>
+                    <div class="child_name">{{ child.name }}</div>
+                    <div class="child_categories">{{ child.categories | join(', ') }}</div>
                 </div>
             </div>
-
-            <div class="child_card">
-                <div class="child">
-                    <div class="child_name">Syoma</div>
-                    <div class="child_categories">C language, games, toxic behaviour</div>
-                </div>
-            </div>
-
-            <div class="child_card">
-                <div class="child">
-                    <div class="child_name">Mikail</div>
-                    <div class="child_categories">scamming, css, html</div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
             
     </body>
