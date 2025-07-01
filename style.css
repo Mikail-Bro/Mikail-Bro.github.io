@@ -262,7 +262,7 @@ body.light-theme .dropdown-panel .close-btn:hover {
 
     .dropdown-panel {
         min-width: 90vw !important;
-        right: 0vw !important;
+        right: 0 !important;
     }
 
     .my_children {
