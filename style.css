@@ -297,7 +297,10 @@ body.light-theme .my_children .highlight {
 
     .dropdown-panel {
         min-width: 90vw !important;
-        right: 5vw !important;
+        right: 0 !important; /* Привязываем к правому краю кнопки */
+        left: auto !important; /* Отключаем left, если он был */
+        border-radius: 8px !important;
+        margin-top: 4px !important;
     }
 
     .my_children {
