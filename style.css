@@ -154,8 +154,8 @@ body.light-theme .dropdown-panel .close-btn:hover {
     display: none;
     position: absolute;
     top: 100%; /* Под кнопкой */
-    left: 50%; /* Центрирование */
-    transform: translateX(-50%);
+    right: 0; /* Выравнивание по правому краю кнопки */
+    left: auto; /* Отключаем левое выравнивание */
     background-color: rgb(67, 141, 67, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 5px;
@@ -300,6 +300,7 @@ body.light-theme .my_children .highlight {
         left: 50% !important;
         transform: translateX(-50%) !important;
         right: auto !important;
+        top: calc(100% + 10px) !important;
     }
 
     .my_children {
