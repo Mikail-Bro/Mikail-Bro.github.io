@@ -297,16 +297,11 @@ body.light-theme .my_children .highlight {
 
     .dropdown-panel {
         min-width: 90vw !important;
-    
-       
+        display: block;
+        margin: 0 auto;
         /* transform: translateX(-50%) !important; Корректировка положения */
        
         top: calc(100% + 10px) !important; /* Расстояние от кнопки */
-
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
     }
 
     .my_children {
