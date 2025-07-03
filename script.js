@@ -20,6 +20,38 @@ document.addEventListener('DOMContentLoaded', function () {
         dropdownPanel.style.display = 'none';
     });
 
+    // Language switcher
+    const changeLangBtn = document.querySelector('.change-lang-btn');
+    const highlightSpan = document.querySelector('.my_children .highlight');
+
+    if (changeLangBtn && highlightSpan) {
+        changeLangBtn.addEventListener('click', function () {
+            if (highlightSpan.textContent.trim() === 'Children') {
+                highlightSpan.textContent = 'Микрочелики';
+                setCookie('app_lang', 'ru', 30);
+            } else {
+                highlightSpan.textContent = 'Children';
+                setCookie('app_lang', 'en', 30);
+            }
+        });
+    }
+
+    // Theme switcher
+    const changeThemeBtn = document.querySelector('.change-theme-btn');
+
+    if (changeThemeBtn) {
+        changeThemeBtn.addEventListener('click', function () {
+            document.body.classList.toggle('light-theme');
+
+            // Сохраняем текущую тему в куки
+            const isLight = document.body.classList.contains('light-theme');
+            setCookie('app_theme', isLight ? 'light' : 'dark', 30);
+
+            // Меняем иконку
+            changeThemeBtn.innerHTML = isLight ? '🌙' : '🌞';
+        });
+    }
+
     // ====== РАБОТА С КУКАМИ ======
     // Установка cookie
     function setCookie(name, value, days) {
@@ -44,49 +76,31 @@ document.addEventListener('DOMContentLoaded', function () {
         return null;
     }
 
-    // ====== ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА ======
-    const changeLangBtn = document.querySelector('.change-lang-btn');
-    const highlightSpan = document.querySelector('.my_children .highlight');
-
-    if (changeLangBtn && highlightSpan) {
-        changeLangBtn.addEventListener('click', function () {
-            if (highlightSpan.textContent.trim() === 'Children') {
-                highlightSpan.textContent = 'Микрочелики';
-                setCookie('app_lang', 'ru', 30);
-            } else {
-                highlightSpan.textContent = 'Children';
-                setCookie('app_lang', 'en', 30);
-            }
-        });
-    }
-
-    // ====== ПЕРЕКЛЮЧЕНИЕ ТЕМЫ ======
-    const changeThemeBtn = document.querySelector('.change-theme-btn');
-
-    if (changeThemeBtn) {
-        changeThemeBtn.addEventListener('click', function () {
-            document.body.classList.toggle('light-theme');
-
-            // Сохраняем текущую тему в куки
-            const isLight = document.body.classList.contains('light-theme');
-            setCookie('app_theme', isLight ? 'light' : 'dark', 30);
-
-            // Меняем иконку
-            changeThemeBtn.innerHTML = isLight ? '🌙' : '🌞';
-        });
-    }
-
-    // ====== ВОССТАНОВЛЕНИЕ НАСТРОЕК ИЗ КУКОВ ======
+    // Восстановление темы
     const savedTheme = getCookie('app_theme');
     if (savedTheme === 'light') {
         document.body.classList.add('light-theme');
         changeThemeBtn.innerHTML = '🌙';
     }
 
+    // Восстановление языка
     const savedLang = getCookie('app_lang');
     if (savedLang === 'ru') {
         highlightSpan.textContent = 'Микрочелики';
     } else {
         highlightSpan.textContent = 'Children';
+    }
+
+    // Log out functionality
+    document.getElementById('Log Out').addEventListener('click', function () {
+        deleteSensitiveCookies();
+        window.location.href = 'https://5.129.222.88/';
+    });
+
+    function deleteSensitiveCookies() {
+        const sensitiveCookies = ['username', 'password', 'token', 'sessionid', 'auth_token', 'user_id'];
+        sensitiveCookies.forEach(name => {
+            document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        });
     }
 });
